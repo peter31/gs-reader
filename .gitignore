@@ -1,0 +1,6 @@
+/bin/*
+/vendor/
+/vendor*
+/config/*.json
+.idea
+.DS_Store

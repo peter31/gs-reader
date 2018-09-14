@@ -1,0 +1,20 @@
+{
+  "name": "gc-viewer",
+  "license": "proprietary",
+  "type": "project",
+  "repositories": [],
+  "autoload": {
+    "psr-4": {
+      "": "src/"
+    }
+  },
+  "require": {
+    "php": ">=7.1",
+    "google/apiclient": "^2.2",
+    "google/cloud-storage": "^1.5.2"
+  },
+  "config": {},
+  "extra": {
+    "branch-alias": null
+  }
+}
