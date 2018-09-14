@@ -1,0 +1,25 @@
+#!/usr/bin/php
+<?php declare(strict_types=1);
+
+require dirname(__DIR__) . '/vendor/autoload.php';
+
+$command = $_SERVER['argv'][1] ?? 'help';
+$param1 = $_SERVER['argv'][2] ?? null;
+$param2 = $_SERVER['argv'][3] ?? null;
+
+$caller = new \App\Caller();
+switch ($command) {
+    case 'list':
+        $caller->showBuckets();
+        break;
+    case 'bucket':
+        $caller->showBucket($param1);
+        break;
+    case 'object':
+        $caller->showObject($param1, $param2);
+        break;
+    case 'help':
+    default:
+        $caller->showHelp();
+        break;
+}
