@@ -13,13 +13,10 @@ class Caller
 
     public function __construct()
     {
-//        $server = 'staging';
-        $server = 'staging-new';
-//        $server = 'id-prod';
-//        $server = 'br-prod';
+        $server = 'config';
 
         $this->storage = new StorageClient([
-            'keyFilePath' => sprintf('%s/%s.json', dirname(dirname(__DIR__)), $server),
+            'keyFilePath' => sprintf('%s/config/%s.json', dirname(dirname(__DIR__)), $server),
         ]);
     }
 
